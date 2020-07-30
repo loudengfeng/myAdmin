@@ -27,7 +27,7 @@
                     </el-submenu>
                 </template>
                 <template v-else>
-                    <el-menu-item :index="item.index" >
+                    <el-menu-item :index="item.index" :key="item.index">
                         <i :class="item.icon" class="iconfont"></i>
                         <span slot="title">{{ item.title }}</span>
                     </el-menu-item>
@@ -52,7 +52,7 @@
                     },
                     {
                         icon: 'icon-B',
-                        index: 'vip',
+                        index: 'memberManagement',
                         title: '会员管理'
                     },
                     {
@@ -61,7 +61,7 @@
                         title: '订单管理',
                         subs:[
                             {
-                                index:'order',
+                                index:'allOrder',
                                 title:'全部订单'
                             },{
                                 index:'customerService',
